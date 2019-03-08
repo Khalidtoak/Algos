@@ -1,12 +1,15 @@
 public class Algos {
     public static void main(String [] args) {
-        bubbleSortEg();
-    }
-    private static void bubbleSortEg(){
+
         int [] arrayToSort = {9, 45, 56, 78, 90, 23, 1, 12, 45, 34, 89, 0, 56, 89, 34, 56, 78, 23, 56, 34, 45, 67};
-        for (int lastSortedPartition = arrayToSort.length -1; lastSortedPartition
-                 > 0; lastSortedPartition --){
-            for (int i = 0; i<lastSortedPartition; i++){
+       // bubbleSortEg(arrayToSort);
+        selecionSortEg(arrayToSort);
+    }
+    private static void bubbleSortEg(int [] arrayToSort){
+
+        for (int lastUnSortedPartition = arrayToSort.length -1; lastUnSortedPartition
+                 > 0; lastUnSortedPartition --){
+            for (int i = 0; i<lastUnSortedPartition; i++){
                 if (arrayToSort[i]> arrayToSort[i+1]){
                     swap(arrayToSort, i, i+1);
                 }
@@ -19,6 +22,20 @@ public class Algos {
         //descending
         for (int i = arrayToSort.length-1; i >=0; i--){
             System.out.print(arrayToSort[i] + " ");
+        }
+    }
+    private static void selecionSortEg(int[] arrayToSort){
+        for (int lastUnsortedPart = arrayToSort.length -1; lastUnsortedPart >0; lastUnsortedPart --){
+            int largest =0;
+            for (int i =1; i<=lastUnsortedPart; i++){
+                if (arrayToSort[i]>arrayToSort[largest]){
+                    largest = i;
+                }
+                swap(arrayToSort, largest, lastUnsortedPart );
+            }
+        }
+        for (int anArrayToSort : arrayToSort) {
+            System.out.println(anArrayToSort);
         }
     }
     private static void swap(int [] arrayToSort, int i, int j){
