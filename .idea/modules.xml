@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algos.iml" filepath="$PROJECT_DIR$/.idea/modules/Algos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algos_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Algos_main.iml" group="Algos" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Algos_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Algos_test.iml" group="Algos" />
+    </modules>
+  </component>
+</project>
